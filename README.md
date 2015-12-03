@@ -4,24 +4,9 @@
  * Рекомендуемые сферы применения: интернет-магазины, онлайн-сервисы, браузерные игры
  * API PayQR и библиотека PayQR обладают большим количеством функций и возможностей, часть из которых нужна только небольшому количеству интернет-сайтов. Для ускорения и упрощения интеграции реализуйте у себя только то, что актуально для бизнес-логики конкретно вашего интернет-сайта, остальное игнорируйте и оставляйте "как есть" (оно по умолчанию работоспособно в библиотеке и уже корректно взаимодействует с API PayQR).
 
-1. First ordered list item
-2. Another item
-⋅⋅* Unordered sub-list. 
-1. Actual numbers don't matter, just that it's a number
-⋅⋅1. Ordered sub-list
-4. And another item.
-
-⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
-
-⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
-⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
-⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
-
-* Unordered list can use asterisks
-- Or minuses
-+ Or pluses
 
 ##Структура библиотеки:
+```
 |- example // примеры для ознакомления по принятию уведомлений от PayQR и направлению запросов в PayQR
     |- button.php // файл примера работы с конструктором кнопки PayQR
     |- sender.php // файл примера работы с запросами в PayQR
@@ -63,7 +48,7 @@
 |- README.md // файл с описанием работы библиотеки
 |- handler.php // основной файл, принимающий уведомления от PayQR (абсолютная ссылка на него указывается в личном кабинете PayQR в поле "URL для уведомлений")
 |- log.php // пхп файл для просмотра логов по ключу
-
+```
 
 
 ___
