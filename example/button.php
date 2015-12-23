@@ -48,11 +48,11 @@ $button->setUserData("analytics_id"); // устанавливает userdata (л
 <body>
   <?= $button->getHtmlButton(); ?>
     <div style="margin: 20px;">
-        <a href="http://<?=$_SERVER['SERVER_NAME']?>/library/payqr/example/sender.php">Административные функции</a>
+        <a href="<?=PayqrConfig::getBaseUrl()?>/payqr/example/sender.php">Административные функции</a>
         <br/>
-        <a href="http://<?=$_SERVER['SERVER_NAME']?>/library/payqr/log.php?key=<?=PayqrConfig::$logKey?>">Логи</a>
+        <a href="<?=PayqrConfig::getBaseUrl()?>/payqr/log.php?key=<?=PayqrConfig::$logKey?>">Логи</a>
         <br/>
-        <a>Url: http://<?=$_SERVER['SERVER_NAME']?>/library/payqr/handler.php</a>
+        <a>Url: <?=PayqrConfig::getBaseUrl()?>/payqr/handler.php</a>
     </div>
 </body>
 </html>

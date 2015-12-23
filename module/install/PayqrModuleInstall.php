@@ -24,10 +24,6 @@ class PayqrModuleInstall
             }
         }
     }
-    public function checkDbConfigConn()
-    {
-        return $this->checkDbConn(PayqrModuleDbConfig::$host, PayqrModuleDbConfig::$username, PayqrModuleDbConfig::$password, PayqrModuleDbConfig::$database);
-    }
 
     public function saveDbConfig($db)
     {
@@ -70,7 +66,7 @@ class PayqrModuleDbConfig
         $password = $auth->encodePassword($post["password"]);
         $id = $db->insert(PayqrModuleDb::getUserTable(), array("username"=>$post["username"], "password"=>$password), array("%s", "%s"));
         $auth = new PayqrModuleAuth($id);
-        PayqrModule::redirect("/module/auth");
+        PayqrModule::redirect("auth");
     }
     
     public function createTables()

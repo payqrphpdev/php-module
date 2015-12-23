@@ -34,7 +34,7 @@ class PayqrModuleAuth
         $this->startSession(); 
         unset($_SESSION[$this->key]);
         unset($_COOKIE[$this->key]);
-        PayqrModule::redirect("/module/auth");
+        PayqrModule::redirect("auth");
     }
 
     public function encodePassword($password)
@@ -47,7 +47,7 @@ class PayqrModuleAuth
     {
         if($this->getUser())
         {
-            PayqrModule::redirect("/module/button/");
+            PayqrModule::redirect("button");
         }
         $db = PayqrModuleDb::getInstance();
         $username = isset($_POST["username"]) ? $_POST["username"] : "";
@@ -59,7 +59,7 @@ class PayqrModuleAuth
             if($user)
             {
                 $this->setUser($user);
-                PayqrModule::redirect("/module/button/");
+                PayqrModule::redirect("button");
             }
         }
     }

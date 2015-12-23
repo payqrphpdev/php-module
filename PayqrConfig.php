@@ -47,6 +47,12 @@ class PayqrConfig
         return $basepath;
     }
     
+    public static function getBaseUrl()
+    {
+        $url = "http://{$_SERVER["SERVER_NAME"]}/" . PayqrConfig::$baseUrl;
+        return $url;
+    }
+    
     public static function setConfig()
     {
         $module = new PayqrModule();

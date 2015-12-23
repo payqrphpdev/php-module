@@ -88,6 +88,7 @@ class PayqrButtonPage
         $html .= "<div class='button_example'>Кнопка в корзине<br/>";
         $html .= $button->getCartButton();
         $html .= "</div>";
+        $html .= "<div><a id='ajax_update_button' href='javascript:void(0)'>Обновить кнопку ajax</a></div>";
         
         $html .= "<div class='button_example'>Кнопка в карточке товара<br/>";
         $html .= $button->getProductButton();

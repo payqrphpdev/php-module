@@ -13,14 +13,19 @@
  */
 class PayqrModule 
 {
-    public static function getBaseUrl()
-    {
-        $url = "http://{$_SERVER["SERVER_NAME"]}/" . PayqrConfig::$baseUrl;
-        return $url;
-    }
-    public static function redirect($url)
+
+    public static function redirect($path, $params = array())
     {        
-        $location = PayqrModule::getBaseUrl() . $url;
+        $location = PayqrConfig::getBaseUrl() . "/module/index.php?path=$path";
+        if(count($params) > 0)
+        {
+            $url = "";
+            foreach ($params as $key=>$value)
+            {
+                $url .= "&$key=$value";
+            }
+            $location .= $url;
+        }
         header("Location: $location");
     }
 
