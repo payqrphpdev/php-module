@@ -106,7 +106,7 @@ class PayqrModuleAuth
         }
         else
         {
-            $location = PayqrModule::getBaseUrl() . "/module/auth/";
+            $location = PayqrConfig::getBaseUrl() . "/module/auth/";
             $auth_location = "http://{$_SERVER['SERVER_NAME']}{$_SERVER['REQUEST_URI']}";
             if($location != $auth_location)
             {

@@ -21,7 +21,7 @@ class PayqrButtonDefaultSettings
         $auth = new PayqrModuleAuth();
         if($user = $auth->getUser())
         {
-            $url = PayqrModule::getBaseUrl() . "/handler.php?user_id={$user->user_id}";
+            $url = PayqrConfig::getBaseUrl() . "/handler.php?user_id={$user->user_id}";
         }
         return $url;
     }
@@ -45,7 +45,7 @@ class PayqrButtonDefaultSettings
         $auth = new PayqrModuleAuth();
         if($user = $auth->getUser())
         {
-            $url = PayqrModule::getBaseUrl() . "/log.php?user_id={$user->user_id}&key={$this->log_key}";
+            $url = PayqrConfig::getBaseUrl() . "/log.php?user_id={$user->user_id}&key={$this->log_key}";
         }
         return $url;
     }

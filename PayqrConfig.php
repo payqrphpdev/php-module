@@ -33,7 +33,7 @@ class PayqrConfig
 
     public static $version_api = '2.0.0'; // версия библиотеки PayQR
     
-    public static $baseUrl = "payqr";
+    public static $baseUrl = "";
     
     public static function getSiteBasePath()
     {
