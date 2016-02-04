@@ -34,7 +34,7 @@ class PayqrAutoload
     public static function Load($pClassName)
     {
         #adding php extension
-        $pClassName .= ".php"; 
+        $pClassName .= ".php";
         $files = self::getFiles();
         foreach ($files as $file)
         {
